@@ -11,13 +11,13 @@ function getAllMovies(){
 
 function getDirectors(){return fromHttpRequest('https://orels-moviedb.herokuapp.com/directors')
 .pipe(
-    map(movies => movies)
+    map(directors => directors)
 )}
 
 function getGenres(){return fromHttpRequest('https://orels-moviedb.herokuapp.com/genres')
 .pipe(
-    map(movies => movies)
+    map(genres => genres)
 ) } 
 
 
-concat(getAllMovies(),getDirectors(),getGenres).subscribe(console.log);
+concat(getAllMovies(),getDirectors(),getGenres()).subscribe(console.log);
